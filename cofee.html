@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.hero{  
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    line-height: 2.5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93')
+        no-repeat center center/cover ;
+}
+
+
+
+h1{
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif    ;
+    font-size: 200%;
+}
+
+
+h3{
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 400%;
+    font-family:'Times New Roman', Times, serif    ;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+h4{
+    text-align: center;
+    font-size: 200%;
+    text-shadow: 2px 2px 4px black;
+    color: rgb(248, 250, 252);
+}
+
+
+
+button{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color:whitesmoke;
+    cursor: pointer;
+    font-size: large;
+}
+
+
+
+.features {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    background-color:whitesmoke;
+}
+
+
+.features img {
+    width: 200px;  
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 4px 4px black;
+}
+
+
+
+.features div {
+    flex: 1;         
+    padding: 60px;
+    color:black;
+    border-radius: 12px;
+}
+
+
+
+.price {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    margin: 20px auto; 
+    max-width: 800px;
+}
+
+
+.price1, .price2, .price3 {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+
+
+.price1:hover, .price2:hover, .price3:hover {
+    transform: translateY(-7px);
+    cursor: pointer;
+    box-shadow: 0 6px 18px;
+}
+
+
+
+.price1 { background-color: orange; }
+.price2 { background-color: rgb(33, 106, 217); }
+.price3 { background-color: orange; }
+
+
+
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    width: fit-content;
+    padding: 2rem;
+    justify-content: center;
+    margin: auto;
+
+}
+
+
+.id{
+    padding: 1rem;
+    box-shadow: 2px 2px 4px  black;
+}
+
+
+footer
+{
+    padding-top: 20px;
+    text-align: center;
+    line-height: 2.0;
+    background-color: rgb(28, 21, 21);  
+    padding-bottom: 30px;  
+    color:rgb(199, 199, 188);
+}
+
+button:hover {
+    background: rgb(21, 22, 1);
+    color: white;
+}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshly Brewed Happiness ☕</title>
+    <link rel="icon" href="images/coffee.jpeg">
+
+</head>
+<body>
+    <section class="hero">
+    <h3 >Freshly Brewed Happiness ☕
+
+    </h3>
+    <h4>Organic Beans • Rich Taste • Fast Delivery</h4>
+    <button>Order Now</button>
+    </section>
+    <section class="features">
+        <div ><img src="images/coffee.jpeg" alt="Coffee">
+            <br><br>
+        <p>Different types of cold coffee and hot coffee</p>
+        </div>
+        <div ><img src="images/milkshake.jpeg" alt="Milk shakes">
+            <br><br>
+            <p>Different types of Milk shakes</p>    
+        </div>
+        <div ><img src="images/food.jpeg" alt="Ice creams">
+            <br><br>
+            <p>Different types of Ice creams</p>
+        </div> <br>
+    </section>
+
+    <section >
+        <h1>Choose your coffee</h1>
+        <br>
+        <div class="price">
+            <div  class="price1">
+                <p>Small cup</p> <br>
+                <p>$ 69</p>
+                <button onclick="addToCart('Small cup Coffee', 69)">Add to Cart</button>
+            </div>
+            <div class="price2">
+                <p>Medium cup</p> <br>
+                <p>$ 129</p>
+                <button onclick="addToCart('Medium cup Coffee', 129)">Add to Cart</button>
+            </div>
+            <div class="price3">
+                <p>Large Cup </p> <br>
+                <p>$ 169</p>
+                <button onclick="addToCart('Large Cup Coffee', 169)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+<br><br>
+    <section >
+        <h1>Choose your milkshake</h1>
+        <br>
+        <div class="price">
+            <div  class="price1">
+                <p>Small cup</p> <br>
+                <p>$ 99</p>
+                <button onclick="addToCart('Small cup milkshake', 99)">Add to Cart</button>
+            </div>
+            <div class="price2">
+                <p>Medium cup</p> <br>
+                <p>$ 149</p>
+                <button onclick="addToCart('Medium cup milkshake', 149)">Add to Cart</button>
+            </div>
+            <div class="price3">
+                <p>Large Cup </p> <br>
+                <p>$ 199</p>
+                <button onclick="addToCart('Large Cup milkshake', 199)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+    <section >
+        <h1>Choose your Ice Cream</h1>
+        <br>
+        <div class="price">
+            <div  class="price1">
+                <p>Small cup</p> <br>
+                <p>$ 49</p>
+                <button onclick="addToCart('Small cup Ice Cream', 49)">Add to Cart</button>
+            </div>
+            <div class="price2">
+                <p>Medium cup</p> <br>
+                <p>$ 99</p>
+                <button onclick="addToCart('Medium cup Ice Cream', 99)">Add to Cart</button>
+            </div>
+            <div class="price3">
+                <p>Large Cup </p> <br>
+                <p>$ 149</p>
+                <button onclick="addToCart('Large Cup Ice Cream', 149)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+        
+    <section >
+        
+        <h1>What our Customers say</h1>
+        <div class="review" >
+            <div class="id">
+                "Tasty milkshake.
+                ⭐⭐⭐⭐⭐" - Sai
+            </div>
+
+            <div class="id">
+                "Good ambiance and Good coffee. 
+                ⭐⭐⭐⭐⭐" - Sam
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        Contact us: <a href="8790374299">8790374299</a> <br>
+        Email:<a href="chaitanyabalireddy@gmail.com">chaitanyabalireddy@gmail.com</a><br>
+        @2025 Coffee Brand | All Rights Reserved
+    </footer>
+</body>
+
+</html>
